@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ThinkTacTime</string>
+
+    <string-array name="topics">
+        <item>Mathematics</item>
+        <item>General</item>
+        <item>Science</item>
+        <item>Technology</item>
+        <item>Music</item>
+    </string-array>
+
+</resources>

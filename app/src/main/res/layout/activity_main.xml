@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.fernandez.thinktactime.MainActivity">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/bgblackhole"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ThinkTacTime"
+        android:textColor="#FFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="19dp"
+        android:layout_above="@+id/btnclock"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/btnclock"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/clock"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="38dp"
+        android:onClick="callClockActivity"
+        android:layout_above="@+id/btnAlarms"
+        android:layout_alignLeft="@+id/btnAlarms"
+        android:layout_alignStart="@+id/btnAlarms" />
+
+    <ImageButton
+        android:id="@+id/btnTopic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/bulb"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/btnclock"
+        android:layout_toEndOf="@+id/btnclock"
+        android:layout_marginLeft="8dp"
+        android:onClick="callTopicActivity"/>
+
+    <ImageButton
+        android:id="@+id/btnWallPaper"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/title"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/btnText"
+        android:layout_toStartOf="@+id/btnText"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/background"
+        android:onClick="callWallPaperActivity"/>
+
+    <ImageButton
+        android:id="@+id/btnText"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignEnd="@+id/btnDelete"
+        android:layout_alignRight="@+id/btnDelete"
+        android:layout_below="@+id/title"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/text"
+        android:onClick="callTextActivity"/>
+
+    <Button
+        android:id="@+id/btnAlarms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:text="Alarms"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnEdit"
+        android:layout_toStartOf="@+id/btnEdit"
+        android:onClick="callAlarmsActivity"/>
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:layout_alignBaseline="@+id/btnAlarms"
+        android:layout_alignBottom="@+id/btnAlarms"
+        android:layout_centerHorizontal="true"
+        android:onClick="callAlarmsActivity"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_alignBaseline="@+id/btnEdit"
+        android:layout_alignBottom="@+id/btnEdit"
+        android:layout_toRightOf="@+id/btnEdit"
+        android:layout_toEndOf="@+id/btnEdit"
+        android:onClick="callAlarmsActivity"/>
+
+</RelativeLayout>
+
